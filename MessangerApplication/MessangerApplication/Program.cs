@@ -16,7 +16,7 @@ namespace MessangerApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChattingForm());
+            Application.Run(new LoginForm());
         }
     }
 }
