@@ -20,6 +20,7 @@ namespace MessangerApplication
         private void btnSend_Click(object sender, EventArgs e)
         {
             txtContents.AppendText(txtChatting.Text + "\n");
+            txtContents.ScrollToCaret();
         }
     }
 }
