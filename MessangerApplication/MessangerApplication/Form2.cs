@@ -12,7 +12,6 @@ namespace MessangerApplication
 {
     public partial class LoginForm : Form
     {
-        UserData userData;
         public LoginForm()
         {
             InitializeComponent();
@@ -29,11 +28,11 @@ namespace MessangerApplication
             if(txtId.Text == "현준" && txtPassword.Text == "1234")
             {
                 MessageBox.Show(txtId.Text + "님 환영합니다.", "환영합니다.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                userData = new UserData();
+                UserData userData = new UserData();
                 userData.setUserId(txtId.Text);
 
                 this.Visible = false;
-                ChattingForm chatting = new ChattingForm();
+                ChattingForm chatting = new ChattingForm(userData);
                 chatting.Show();
             }
         }
