@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MessangerApplication
 {
-    class UserData
+    public class UserData
     {
         private string userId;
 
@@ -14,7 +14,6 @@ namespace MessangerApplication
         {
             return userId;
         }
-
         public void setUserId(string userId)
         {
             this.userId = userId;
