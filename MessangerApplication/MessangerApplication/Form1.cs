@@ -12,15 +12,17 @@ namespace MessangerApplication
 {
     public partial class ChattingForm : Form
     {
-        public ChattingForm()
+        UserData userData;
+        public ChattingForm(UserData userData)
         {
             InitializeComponent();
+            this.userData = userData;
         }
-
         private void btnSend_Click(object sender, EventArgs e)
         {
-            txtContents.AppendText(txtChatting.Text + "\n");
+            txtContents.AppendText(userData.getUserId().ToString() + " : " + txtChatting.Text + "\n");
             txtContents.ScrollToCaret();
+            txtContents.Text = "";
         }
     }
 }
