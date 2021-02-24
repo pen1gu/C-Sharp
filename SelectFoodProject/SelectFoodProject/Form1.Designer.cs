@@ -30,22 +30,34 @@ namespace SelectFoodProject
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnStartEvent = new System.Windows.Forms.Button();
             this.BtnConfirm = new System.Windows.Forms.Button();
             this.FoodCheckList = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.TxtMenu = new System.Windows.Forms.TextBox();
             this.BtnCurrentFood = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.BtnStartEvent);
             this.panel1.Location = new System.Drawing.Point(202, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(358, 325);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnStartEvent
+            // 
+            this.BtnStartEvent.Location = new System.Drawing.Point(131, 298);
+            this.BtnStartEvent.Name = "BtnStartEvent";
+            this.BtnStartEvent.Size = new System.Drawing.Size(91, 22);
+            this.BtnStartEvent.TabIndex = 5;
+            this.BtnStartEvent.Text = "시작";
+            this.BtnStartEvent.UseVisualStyleBackColor = true;
+            this.BtnStartEvent.Click += new System.EventHandler(this.BtnStartEvent_Click);
             // 
             // BtnConfirm
             // 
@@ -53,7 +65,7 @@ namespace SelectFoodProject
             this.BtnConfirm.Name = "BtnConfirm";
             this.BtnConfirm.Size = new System.Drawing.Size(92, 25);
             this.BtnConfirm.TabIndex = 1;
-            this.BtnConfirm.Text = "선택";
+            this.BtnConfirm.Text = "추가";
             this.BtnConfirm.UseVisualStyleBackColor = true;
             this.BtnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
             // 
@@ -83,21 +95,12 @@ namespace SelectFoodProject
             this.label2.TabIndex = 3;
             this.label2.Text = "메뉴 추가";
             // 
-            // textBox1
+            // TxtMenu
             // 
-            this.textBox1.Location = new System.Drawing.Point(263, 357);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 21);
-            this.textBox1.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(63, 226);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.TxtMenu.Location = new System.Drawing.Point(263, 357);
+            this.TxtMenu.Name = "TxtMenu";
+            this.TxtMenu.Size = new System.Drawing.Size(199, 21);
+            this.TxtMenu.TabIndex = 4;
             // 
             // BtnCurrentFood
             // 
@@ -107,6 +110,7 @@ namespace SelectFoodProject
             this.BtnCurrentFood.TabIndex = 6;
             this.BtnCurrentFood.Text = "최근 통계 보기";
             this.BtnCurrentFood.UseVisualStyleBackColor = true;
+            this.BtnCurrentFood.Click += new System.EventHandler(this.BtnCurrentFood_Click);
             // 
             // RandomMenuForm
             // 
@@ -114,8 +118,7 @@ namespace SelectFoodProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 397);
             this.Controls.Add(this.BtnCurrentFood);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtMenu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FoodCheckList);
@@ -123,6 +126,7 @@ namespace SelectFoodProject
             this.Controls.Add(this.panel1);
             this.Name = "RandomMenuForm";
             this.Text = "메뉴 랜덤 선택";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,8 +139,8 @@ namespace SelectFoodProject
         private System.Windows.Forms.CheckedListBox FoodCheckList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox TxtMenu;
+        private System.Windows.Forms.Button BtnStartEvent;
         private System.Windows.Forms.Button BtnCurrentFood;
     }
 }
