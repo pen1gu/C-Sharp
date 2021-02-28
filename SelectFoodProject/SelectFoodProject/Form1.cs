@@ -53,6 +53,8 @@ namespace SelectFoodProject
 
             _resultList.Add(controlData);
             UpdateMenuBoard();
+
+            //TODO: 자동으로 마지막에 포커스 올라가는 기능 구현(scrollable)
         }
 
         private void BtnCurrentFood_Click(object sender, EventArgs e)
@@ -92,6 +94,8 @@ namespace SelectFoodProject
            
         }
     }
+
+    //TODO: 메뉴 분류 별로 상수로 지정된 리스트 제작
 
     public class MenuControlData
     {
