@@ -81,7 +81,7 @@ namespace SelectFoodProject
 
             foreach (var result in _resultList)
             {
-                result.Control.SetBounds(0 , index * 30 + 10, 60, 20);
+                result.Control.SetBounds(0 , index * 30 + 10, 100, 20);
 
                 MenuPanel.Controls.Add(result.Control);
                 index++;
@@ -92,6 +92,11 @@ namespace SelectFoodProject
         {
             //TODO: 체크한 것이 없을 시 버튼 비활성화
            
+        }
+
+        private void RandomMenuForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

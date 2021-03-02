@@ -124,6 +124,7 @@ namespace SelectFoodProject
             this.Controls.Add(this.panel1);
             this.Name = "RandomMenuForm";
             this.Text = "메뉴 랜덤 선택";
+            this.Load += new System.EventHandler(this.RandomMenuForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
